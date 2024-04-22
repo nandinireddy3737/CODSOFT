@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+        #clock {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .clock-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .clock-controls label {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        .clock-controls input {
+            width: 40px;
+            text-align: center;
+            margin: 0 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+        .clock-controls button {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .clock-controls button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">00:00:00</div>
+    <div class="clock-controls">
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" min="0" max="23" value="0">
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" min="0" max="59" value="0">
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" min="0" max="59" value="0">
+        <button onclick="updateTime()">Update Time</button>
+        <button onclick="getCurrentTime()">Get Current Time</button>
+    </div>
+
+    <script>
+        let timer;
+
+        function updateTime() {
+            const hours = document.getElementById('hours').value.padStart(2, '0');
+            const minutes = document.getElementById('minutes').value.padStart(2, '0');
+            const seconds = document.getElementById('seconds').value.padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Initial call to display the time immediately
+        updateTime();
+
+        // Update the time every second
+        function startClock() {
+            timer = setInterval(updateTime, 1000);
+        }
+
+        // Stop updating the time
+        function stopClock() {
+            clearInterval(timer);
+        }
+
+        // Get the current time and display it in the input fields
+        function getCurrentTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('hours').value = hours;
+            document.getElementById('minutes').value = minutes;
+            document.getElementById('seconds').value = seconds;
+            updateTime(); // Update the clock display
+        }
+
+        // Update the time when the page gains focus
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                updateTime();
+            }
+        });
+
+        // Update the time when the window is resized
+        window.addEventListener('resize', updateTime);
+    </script>
+</body>
+</html>
