@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                
+                </ul>
+              
+            </nav>
+            <div class="header-text">
+                <p class="text">Web Develpoer</p>
+                <h1>Hi, I'm <span>Nandini</span></h1>
+            </div>
+       
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello there I'm Nandini, a frontend developer passionate about crafting exceptional digital experiences. With a focus on performance and usability, I strive to create websites and applications that not only look great but also deliver results. I have a strong foundation in frontend technologies and a knack for problem-solving. I'm excited about the future of web development and eager to be a part of it. Let's build something awesome together!
+
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        
+                        <p class="tab-links"  onclick="opentab('education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Devlopment</span><br>Web app Development</li>
+                            <li><span>MySQL</span><br>Expert in Database Managementtools like MySQL</li>
+                            <li><span>MongoDB</span><br>Intermediate in Non Releational Management tools like MongoDB<br></li>
+                        </ul>
+
+                    </div>
+                                        <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>SSC from Nandyal</li>
+                            <li><span>2020</span><br>HSC from Nandyal</li>
+                            <li><span>2024</span><br>Bachelor's of Technology from Nandyal</li>
+                        </ul>
+
+                    </div>
+                                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <!--<i class="fa-solid fa-code"></i>-->
+                    <h2>Web Design</h2>
+               
+                    <p>As a web designer, I'm dedicated to crafting immersive online experiences that leave a lasting impact. With a passion for creativity and a knack for problem-solving, I meticulously design layouts, select fonts, and curate imagery to convey brands' unique stories.</p>
+                    <a href="https://en.wikipedia.org/wiki/Web_design" target="_blank">Learn More</a>
+                </div>
+                <div>
+                <!---<i class="fa-solid fa-crop"></i> ------->    
+                    <h2>Web Devlopment</h2>
+                  
+                    <p>As a web developer, I transform ideas into responsive and efficient websites. With expertise in coding languages like HTML, CSS, and JavaScript, I create user-friendly interfaces and seamless experiences. .</p>
+                    <a href="https://en.wikipedia.org/wiki/Web_development" target="_blank">Learn More</a>
+                </div>
+                <div> 
+                    <!--<i class="fa-solid fa-server"></i>-->
+                    
+                    <h2>IoT Applications</h2>
+                   
+                    <p>As an IoT developer, I specialize in building interconnected devices and systems that bring the physical and digital worlds together. </p>
+                    <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Portfolio-->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                   <img src="Images.jpg" alt="">
+                   <div class="layer">
+                    <h3>To-Do-App</h3>
+                    <p>Designed and implemented a to-do-app.passionate about the programming languages like javascript,html and developing apps.</p>
+                    
+                   </div>
+                </div>
+                            </div>
+          
+        </div>
+    </div>
+   
+  <div id="contact">
+<div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+           
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/nandini-reddy-222737253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+            
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                <button type="submit " class="btn btn2">Submit</button>
+
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+  </div>
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+<script>
+     const scriptURL = 'https://script.google.com/macros/s/AKfycbwpO6Gs5jKaBrguEthhMUFUpmJDGUbxqVDAY-BLnqvQnHu_Dg5ikde6etqoXcRSPoo/exec'
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                if (response.ok) {
+                    msg.innerHTML = "Message sent. Thank you!";
+                    form.reset();
+                } else {
+                    msg.innerHTML = "Error sending message. Please try again.";
+                }
+                setTimeout(function() {
+                    msg.innerHTML = "";
+                }, 5000);
+            })
+            .catch(error => {
+                msg.innerHTML = "Error sending message. Please try again.";
+                console.error('Error!', error);
+            });
+    });
+</script>
+
+    
+</body>
+</html>
